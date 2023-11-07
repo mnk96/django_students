@@ -12,7 +12,7 @@
 - Зарплата
 ## Стек тенологий:
 - Python 3.7
-- Django REST Framework
+- Django
 - PostgreSQL
 - Git
 
