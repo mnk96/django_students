@@ -1,0 +1,17 @@
+{% extends 'menu_university/base.html' %}
+
+{% block title %}Вы вышли из системы{% endblock %}
+
+{% block content %}
+  {% with card_header='Выход' card_body='Вы вышли из своей учётной записи. Ждём вас снова!' %}
+  <div class="row justify-content-center">
+    <div class="col-md-8 p-5">
+      <div class="card">
+        <div class="card-header">{{ card_header }}</div>
+        <div class="card-body"> <p>{{ card_body }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endwith %}
+{% endblock %} 

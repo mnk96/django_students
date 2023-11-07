@@ -1,0 +1,24 @@
+{% extends 'menu_university/base.html' %}
+
+{% block title %} Внутренняя система университета {% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 p-5">
+      <div class="card">
+        <div class="card-header">
+          Главная страница
+        </div>
+        {% if request.user.is_authenticated %}
+        <div class="card-body">
+            <p> Выберите пункт меню </p>
+        </div>
+    {% else %}
+        <div class="card-body">
+            <p>Необходимо войти в систему</p>
+        </div>
+    {% endif %}
+        </div>
+    </div> 
+</div>
+ 
+{% endblock %}

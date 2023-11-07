@@ -1,0 +1,48 @@
+{% extends 'menu_university/base.html' %}
+{% block title %}Войти{% endblock %}
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-md-8 p-5">
+      <div class="card">
+        <div class="card-header">
+          Войти в личный кабинет
+        </div>
+        <div class="card-body">
+          {% if form.errors %}
+              {% for field in form %}
+                {% for error in field.errors %}            
+                  <div class="alert alert-danger">
+                    {{ error|escape }}
+                  </div>
+                {% endfor %}
+              {% endfor %}
+              {% for error in form.non_field_errors %}
+                <div class="alert alert-danger">
+                  {{ error|escape }}
+                </div>
+              {% endfor %}
+          {% endif %}
+
+          <form action="" method="post">
+          {% csrf_token %}
+          <table>
+            <tr>
+              <td><label for="form.email">Ваша почта: </label></td>
+                <td><input id="email" type="email" name="email" maxlength="100" required></td>
+            </tr>
+            <tr>
+          <td><label for="form.password">Ваш пароль: </label></td>
+          <td><input id="password" type="password" name="password" maxlength="100" required></td>
+            </tr>
+          </table>
+          <div class="col-md-6 offset-md-4">
+            <button type="submit" class="btn btn-primary">
+              Войти
+            </button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div> 
+</div>
+{% endblock %}
