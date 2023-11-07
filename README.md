@@ -16,6 +16,10 @@
 - PostgreSQL
 - Git
 
+### Данные для входа:
+- Преподаватель(email: ivanov@ya.ru, password: testuser2)
+- Студент(email: petrov@ya.ru, password: prepod13)
+
 ## Как запустить проект:
 
 Клонировать репозиторий и перейти в него в командной строке:
